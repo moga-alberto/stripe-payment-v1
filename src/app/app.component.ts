@@ -22,13 +22,13 @@ export class AppComponent {
       locale: 'auto',
       token: function(stripeToken: any) {
         console.log(stripeToken.card);
-        alert('Stripe token generated!');
+        alert('Your payment has been processed. Stripe token generated!');
       },
     });
 
     paymentHandler.open({
-      name: 'Test name',
-      description: '1 product added',
+      name: 'Test Name',
+      description: 'This is your payment session',
       amount: value * 100,
     })
   }
